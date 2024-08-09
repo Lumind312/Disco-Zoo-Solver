@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Disco Zoo </title>
+		<script defer src="main.js"></script>
+	</head>
+
+
+	<body>
+		<h1> Welcome to the Disco Zoo Solver! </h1>
+		
+		<!-- First, choose a habitat to access data for. -->
+		<h2>
+			<select name="Habitat" id="habitat">;
+				<option value="farm">Farm</option>
+				<option value="outback">Outback</option>
+				<option value="savanna">Savanna</option>
+				<option value="northern">Northern</option>
+				<option value="jungle">Jungle</option>
+				<option value="polar">Polar</option>
+				<option value="jurassic">Jurassic</option>
+				<option value="city">City</option>
+				<option value="Ice Age">Ice Age</option>
+				<option value="mountain">Mountain</option>
+				<option value="moon">Moon</option>
+				<option value="mars">Mars</option>
+			</select>
+
+			<button type="menu" id="go_button">Go</button>
+		</h2>
+
+		<!-- From there, checkbox select animals to search. -->
+		<h2>
+			Choose the animals you want to search.<br>
+		</h2>
+		<p id="animals">
+			<input type="checkbox" id="animal1">Animal
+		</p>
+
+		<input type="file" id="file-input" />
+		<h3>Contents of the file:</h3>
+		<pre id="file-content"></pre>
+
+		<!-- For now, display each one. Later, show a grid with all 3 combined. -->
+
+	</body>
+
+</html>
