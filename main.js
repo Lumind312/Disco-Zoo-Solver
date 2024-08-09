@@ -50,12 +50,12 @@ async function populate(habitat) {
 		let label = document.createElement('label');
 
 		checkBox.type = "checkbox";
-		checkBox.value = animals[i][0];
+		checkBox.value = animals[i][0].replace('_',' ');
 		checkBox.name = "checkbox";
 
 		ani.appendChild(checkBox);
 		ani.appendChild(label);
-		label.appendChild(document.createTextNode(animals[i][0]));
+		label.appendChild(document.createTextNode(animals[i][0].replace('_',' ')));
 		label.appendChild(document.createElement("br"));
 	}
 
