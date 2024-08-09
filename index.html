@@ -4,6 +4,7 @@
 	<head>
 		<title> Disco Zoo </title>
 		<script defer src="main.js"></script>
+		<!-- Access-Control-Allow-Origin: * -->
 	</head>
 
 
@@ -35,13 +36,16 @@
 			Choose the animals you want to search.<br>
 		</h2>
 		<p id="animals">
-			<input type="checkbox" id="animal1">Animal
+			<!--
+			<input type="checkbox" value="Sheep">
+				<label>Sheep<br></label>
+			-->
+			<!-- ... -->
 		</p>
-
-		<input type="file" id="file-input" />
-		<h3>Contents of the file:</h3>
-		<pre id="file-content"></pre>
-
+		<p>
+			<button id="generate" hidden>Generate</button>
+			<p id="max3warning" hidden>Warning: Only 3 animals ever appear at a time.</p>		<!-- See notice in JS event -->
+		</p>
 		<!-- For now, display each one. Later, show a grid with all 3 combined. -->
 
 	</body>
