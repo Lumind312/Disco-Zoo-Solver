@@ -4,6 +4,7 @@ window.onload;
 
 /*----- app's state (variables) -----*/
 let habitat;
+let animals;
 
 /*----- cached element references -----*/
 let checks;
@@ -11,6 +12,7 @@ let checks;
 /*----- event listeners -----*/
 document.getElementById("go_button").addEventListener("click", readHabitat);
 document.getElementById("generate").addEventListener("click", generateMatrix);
+
 // NOTICE: I scrapped the idea of preventing more than 3 checkboxes being checked.
 // when checkboxes get to more than 3, put a warning message that says that only 3 max appear in game
 document.getElementById("animals").onclick = function(event) {
@@ -21,10 +23,13 @@ document.getElementById("animals").onclick = function(event) {
 	checks.forEach(function(value, index) {
 		if (value.checked) {
 			checklist.push(value);
+			
+			// show image in a container (rows of 3)
 		}
 	})
-	console.log("Checklist", checklist);
+	// console.log("Checklist", checklist);
 
+	// lock checkbox here
 	// event.stopPropagation();
 	document.getElementById("max3warning").hidden = (checklist.length <= 3);
 };
@@ -39,7 +44,7 @@ async function populate(habitat) {
 	const requestURL = f;
 	const request = new Request(requestURL);
 	const response = await fetch(request);
-	const animals = await response.json();
+	animals = await response.json();
 	console.log("The animals from json:", animals);
 
 	let ani = document.getElementById("animals");
@@ -83,13 +88,13 @@ function readHabitat() {
 function generateMatrix() {
 	// document.getElementById("animals");
 
-	let checklist = [];
+	let animalsList = [];
 	checks = Array.from(document.querySelectorAll('#animals input'));
 	checks.forEach(function(value, index) {
 		if (value.checked) {
-			checklist.push(value);
+			animalsList.push(animals[index]);
 		}
 	})
 
-	console.log(checklist);
+	console.log(animalsList);
 }

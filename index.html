@@ -4,7 +4,10 @@
 	<head>
 		<title> Disco Zoo </title>
 		<script defer src="main.js"></script>
-		<!-- Access-Control-Allow-Origin: * -->
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<!-- Used for python web scraping -->
+		<!-- <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+		<!-- Access-Control-Allow-Origin: used Github pages to access data -->
 	</head>
 
 
@@ -47,7 +50,38 @@
 			<p id="max3warning" hidden>Warning: Only 3 animals ever appear at a time.</p>		<!-- See notice in JS event -->
 		</p>
 		<!-- For now, display each one. Later, show a grid with all 3 combined. -->
+		
+		
+		<!-- Can I scrape pictures from the wiki? Yes -->
+		<p> Images taken from <a href="https://discozoo.fandom.com/wiki/Disco_Zoo_Wiki">Disco Zoo Wiki</a><br>
+			
+			
+			<div class="flexcontainer flex-column">
+			<div class="flex-container flex-wrap" id="show_animals">
+				<div class="square">Sheep</div>
+				<div class="square"><img src="https://static.wikia.nocookie.net/discozoo/images/c/cc/Sheep.png/revision/latest?cb=20200912054320"></div>
+				<div class="square"><img src="https://static.wikia.nocookie.net/discozoo/images/c/cc/Sheep.png/revision/latest?cb=20200912054320"></div>
+				<div class="square">Sheep</div>
+				<div class="square"><img src="https://static.wikia.nocookie.net/discozoo/images/c/cc/Sheep.png/revision/latest?cb=20200912054320"></div>
+				<div class="square"><img src="https://static.wikia.nocookie.net/discozoo/images/c/cc/Sheep.png/revision/latest?cb=20200912054320"></div>
+				<div class="square">Sheep</div>
+				<div class="square"><img src="https://static.wikia.nocookie.net/discozoo/images/c/cc/Sheep.png/revision/latest?cb=20200912054320"></div>
+				<div class="square"><img src="https://static.wikia.nocookie.net/discozoo/images/c/cc/Sheep.png/revision/latest?cb=20200912054320"></div>
+			</div>
+			</div>
+		</p>
 
+		<!-- <button onclick="goPython()">Scrape
+		<script>
+			function goPython(){
+				$.ajax({
+					url: "data/webscrape_data.py",
+					context: document.body
+				}).done(function() {
+					alert('finished python script');;
+				});
+			}
+		</script> -->
 	</body>
 
 </html>

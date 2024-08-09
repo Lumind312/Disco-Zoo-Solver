@@ -7,7 +7,6 @@ Because JS doesn't allow local file reads, the data needed to load animals (beca
 
 Issues I'm currently focused on:
 * Make a grid.
-* Save all images to local/repo.
 * Display said images.
 * Display correct images when button is pressed.
 
@@ -18,3 +17,6 @@ Later on... <br>
 Later later on... <br>
 * When grid is clicked, rotate through animals selected (or nothing).
 * Update grid based on options.
+
+Completed:
+* Save all images to local/repo.
